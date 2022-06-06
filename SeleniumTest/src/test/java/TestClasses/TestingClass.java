@@ -28,7 +28,8 @@ public class TestingClass {
 	Loginpage loginpage;
 	HomePage homePage;
 	SoftAssert soft;
-	
+	static ExtentTest test;
+	static ExtentHtmlReporter reporter; 
 	@Parameters ("browserName")
 	@BeforeTest
 	public void lounchBrowser(String browser) {
