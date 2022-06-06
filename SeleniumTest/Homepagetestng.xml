@@ -1,9 +1,10 @@
- <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" thread-count="1">
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+
+<suite name="Suite" thread-count="2">
 
 	<listeners>
-		<listener class-name="extendReport.ExtentTestNGIReporterListene.java" />
+		<listener class-name="extendReport.ExtentTestNGIReporterListener" />
 	</listeners>
 
 
@@ -21,12 +22,7 @@
     </classes>
   </test> <!-- Test --> 
 
-<!-- https://mvnrepository.com/artifact/log4j/log4j -->
-<dependency>
-    <groupId>log4j</groupId>
-    <artifactId>log4j</artifactId>
-    <version>1.2.17</version>
-</dependency>
+
 
 
 

@@ -23,16 +23,38 @@ import PomClasses.HomePage;
 import PomClasses.Loginpage;
  
 
+
+import java.io.File;
+ 
+ 
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
+ 
+ 
+ 
+
+
 public class TestingClass {
 	WebDriver driver;
 	Loginpage loginpage;
 	HomePage homePage;
 	SoftAssert soft;
+	
+	 
 	static ExtentTest test;
-	static ExtentHtmlReporter reporter; 
+	static ExtentHtmlReporter reporter;
+	
+	 
 	@Parameters ("browserName")
 	@BeforeTest
 	public void lounchBrowser(String browser) {
+		
+		reporter = new ExtentHtmlReporter("test-output"+File.separator+"ExtendReport"+File.separator+"extendReport.html");
+		ExtentReports extend = new ExtentReports();
+		extend.attachReporter(reporter);
 		
 		System.out.println(browser);
 		
